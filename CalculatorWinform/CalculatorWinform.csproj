@@ -80,6 +80,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="material\lishi.ico" />
+    <Content Include="material\lishi.png" />
     <Content Include="material\计算器.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
