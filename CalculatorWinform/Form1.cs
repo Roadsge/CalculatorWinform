@@ -26,8 +26,6 @@ namespace CalculatorWinform
         {
             textBox2.Focus();
             AutoPartSize();
-
-
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -74,7 +72,7 @@ namespace CalculatorWinform
         public void Clear()
         {
             textBox1.Clear();
-            textBox2.Clear();
+            textBox2.Text = "0";
         }
 
         /// <summary>
@@ -90,7 +88,15 @@ namespace CalculatorWinform
 
             flag = false;
             Button button = (Button)sender;
-            textBox2.Text = textBox2.Text + button.Text;
+            if (textBox2.Text.Equals("0"))
+            {
+                textBox2.Text = button.Text;
+            }
+            else
+            {
+                textBox2.Text = textBox2.Text + button.Text;
+            }
+
         }
 
         private void clear_Click(object sender, EventArgs e)
@@ -101,16 +107,23 @@ namespace CalculatorWinform
         private void fraction_Click(object sender, EventArgs e)
         {
             flag = true;
+            double dividend_number = double.Parse(textBox2.Text);
+            textBox1.Text = $"1/({textBox2.Text})";
+            textBox2.Text = (1d / dividend_number).ToString();
         }
 
         private void square_Click(object sender, EventArgs e)
         {
             flag = true;
+            textBox1.Text = $"sqr({textBox2.Text})";
+            textBox2.Text = Math.Pow(double.Parse(textBox2.Text), 2).ToString();
         }
 
         private void SquareRoot_Click(object sender, EventArgs e)
         {
             flag = true;
+            textBox1.Text = "\u221A" + textBox2.Text;
+            textBox2.Text = Math.Sqrt(double.Parse(textBox2.Text)).ToString();
         }
 
         private void division_Click(object sender, EventArgs e)
@@ -186,6 +199,58 @@ namespace CalculatorWinform
         private void nine_Click(object sender, EventArgs e)
         {
             SetValue(sender);
+        }
+
+        private void deleat_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text.Length > 0)
+            {
+                textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+            }
+            if (textBox2.Text.Length == 0)
+            {
+                textBox2.Text = "0";
+            }
+
+        }
+
+        private void cleac_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = "0";
+        }
+
+        private void decimalBtn_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text.Contains('.'))
+            {
+                return;
+            }
+            else
+            {
+                if (textBox2.Text == "0")
+                {
+                    textBox2.Text = textBox2.Text + ".";
+                    flag = false;
+                }
+                else
+                {
+                    SetValue(sender);
+                }
+
+            }
+
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            if (double.Parse(textBox2.Text) > 0)
+            {
+                textBox2.Text = "-" + textBox2.Text;
+            }
+            else if (double.Parse(textBox2.Text) < 0)
+            {
+                textBox2.Text = (0 - double.Parse(textBox2.Text)).ToString();
+            }
         }
     }
 }

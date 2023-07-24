@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.change = new System.Windows.Forms.Button();
             this.history = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -71,6 +70,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.change = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.history)).BeginInit();
@@ -82,6 +82,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -130,17 +131,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(473, 63);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
-            // change
-            // 
-            this.change.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.change.Location = new System.Drawing.Point(1, 1);
-            this.change.Margin = new System.Windows.Forms.Padding(1);
-            this.change.Name = "change";
-            this.change.Size = new System.Drawing.Size(57, 61);
-            this.change.TabIndex = 3;
-            this.change.Text = "改变";
-            this.change.UseVisualStyleBackColor = true;
-            // 
             // history
             // 
             this.history.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -155,9 +145,11 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Font = new System.Drawing.Font("宋体", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox1.Location = new System.Drawing.Point(3, 66);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(467, 25);
@@ -166,6 +158,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox2.Font = new System.Drawing.Font("宋体", 33F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -203,17 +196,22 @@
             // 
             // MDown
             // 
+            this.MDown.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MDown.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.MDown.Location = new System.Drawing.Point(386, 1);
             this.MDown.Margin = new System.Windows.Forms.Padding(1);
             this.MDown.Name = "MDown";
             this.MDown.Size = new System.Drawing.Size(80, 45);
             this.MDown.TabIndex = 5;
             this.MDown.Text = "MDown";
-            this.MDown.UseVisualStyleBackColor = true;
+            this.MDown.UseVisualStyleBackColor = false;
             // 
             // MS
             // 
+            this.MS.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MS.Location = new System.Drawing.Point(309, 1);
             this.MS.Margin = new System.Windows.Forms.Padding(1);
@@ -221,10 +219,12 @@
             this.MS.Size = new System.Drawing.Size(75, 45);
             this.MS.TabIndex = 4;
             this.MS.Text = "MS";
-            this.MS.UseVisualStyleBackColor = true;
+            this.MS.UseVisualStyleBackColor = false;
             // 
             // MReduce
             // 
+            this.MReduce.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MReduce.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MReduce.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MReduce.Location = new System.Drawing.Point(232, 1);
             this.MReduce.Margin = new System.Windows.Forms.Padding(1);
@@ -232,40 +232,48 @@
             this.MReduce.Size = new System.Drawing.Size(75, 45);
             this.MReduce.TabIndex = 3;
             this.MReduce.Text = "M-";
-            this.MReduce.UseVisualStyleBackColor = true;
+            this.MReduce.UseVisualStyleBackColor = false;
             // 
             // MPlus
             // 
+            this.MPlus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MPlus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MPlus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MPlus.FlatAppearance.BorderSize = 0;
             this.MPlus.Location = new System.Drawing.Point(155, 1);
             this.MPlus.Margin = new System.Windows.Forms.Padding(1);
             this.MPlus.Name = "MPlus";
             this.MPlus.Size = new System.Drawing.Size(75, 45);
             this.MPlus.TabIndex = 2;
             this.MPlus.Text = "M+";
-            this.MPlus.UseVisualStyleBackColor = true;
+            this.MPlus.UseVisualStyleBackColor = false;
             // 
             // MR
             // 
+            this.MR.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MR.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MR.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.MR.Location = new System.Drawing.Point(78, 1);
             this.MR.Margin = new System.Windows.Forms.Padding(1);
             this.MR.Name = "MR";
             this.MR.Size = new System.Drawing.Size(75, 45);
             this.MR.TabIndex = 1;
             this.MR.Text = "MR";
-            this.MR.UseVisualStyleBackColor = true;
+            this.MR.UseVisualStyleBackColor = false;
             // 
             // MC
             // 
+            this.MC.BackColor = System.Drawing.Color.WhiteSmoke;
             this.MC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MC.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.MC.Location = new System.Drawing.Point(1, 1);
             this.MC.Margin = new System.Windows.Forms.Padding(1);
             this.MC.Name = "MC";
             this.MC.Size = new System.Drawing.Size(75, 45);
             this.MC.TabIndex = 0;
             this.MC.Text = "MC";
-            this.MC.UseVisualStyleBackColor = true;
+            this.MC.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel4
             // 
@@ -336,6 +344,7 @@
             this.decimalBtn.TabIndex = 22;
             this.decimalBtn.Text = ".";
             this.decimalBtn.UseVisualStyleBackColor = false;
+            this.decimalBtn.Click += new System.EventHandler(this.decimalBtn_Click);
             // 
             // zero
             // 
@@ -361,6 +370,7 @@
             this.button29.TabIndex = 20;
             this.button29.Text = "+/-";
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // plus
             // 
@@ -535,7 +545,7 @@
             this.SquareRoot.Name = "SquareRoot";
             this.SquareRoot.Size = new System.Drawing.Size(116, 72);
             this.SquareRoot.TabIndex = 6;
-            this.SquareRoot.Text = "开方";
+            this.SquareRoot.Text = "平方根";
             this.SquareRoot.UseVisualStyleBackColor = true;
             this.SquareRoot.Click += new System.EventHandler(this.SquareRoot_Click);
             // 
@@ -559,7 +569,7 @@
             this.fraction.Name = "fraction";
             this.fraction.Size = new System.Drawing.Size(116, 72);
             this.fraction.TabIndex = 4;
-            this.fraction.Text = "1/X";
+            this.fraction.Text = "1/x";
             this.fraction.UseVisualStyleBackColor = true;
             this.fraction.Click += new System.EventHandler(this.fraction_Click);
             // 
@@ -573,6 +583,7 @@
             this.deleat.TabIndex = 3;
             this.deleat.Text = "删除";
             this.deleat.UseVisualStyleBackColor = true;
+            this.deleat.Click += new System.EventHandler(this.deleat_Click);
             // 
             // clear
             // 
@@ -596,6 +607,7 @@
             this.cleac.TabIndex = 1;
             this.cleac.Text = "CE";
             this.cleac.UseVisualStyleBackColor = true;
+            this.cleac.Click += new System.EventHandler(this.cleac_Click);
             // 
             // percent
             // 
@@ -655,6 +667,17 @@
             this.tabPage2.Text = "记忆";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // change
+            // 
+            this.change.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.change.Location = new System.Drawing.Point(1, 1);
+            this.change.Margin = new System.Windows.Forms.Padding(1);
+            this.change.Name = "change";
+            this.change.Size = new System.Drawing.Size(57, 61);
+            this.change.TabIndex = 4;
+            this.change.Text = "改变";
+            this.change.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -684,7 +707,6 @@
         #endregion
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button change;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -724,6 +746,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button change;
     }
 }
 
