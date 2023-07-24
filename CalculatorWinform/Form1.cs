@@ -24,10 +24,9 @@ namespace CalculatorWinform
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            AutoPartSize();
-            textBox2.Text = "0";
             textBox2.Focus();
+            AutoPartSize();
+
 
         }
 
