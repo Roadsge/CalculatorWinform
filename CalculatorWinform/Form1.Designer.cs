@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.change = new System.Windows.Forms.Button();
             this.history = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -70,7 +71,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.change = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.history)).BeginInit();
@@ -130,6 +130,17 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(473, 63);
             this.tableLayoutPanel2.TabIndex = 6;
+            // 
+            // change
+            // 
+            this.change.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.change.Location = new System.Drawing.Point(1, 1);
+            this.change.Margin = new System.Windows.Forms.Padding(1);
+            this.change.Name = "change";
+            this.change.Size = new System.Drawing.Size(57, 61);
+            this.change.TabIndex = 4;
+            this.change.Text = "改变";
+            this.change.UseVisualStyleBackColor = true;
             // 
             // history
             // 
@@ -666,17 +677,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "记忆";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // change
-            // 
-            this.change.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.change.Location = new System.Drawing.Point(1, 1);
-            this.change.Margin = new System.Windows.Forms.Padding(1);
-            this.change.Name = "change";
-            this.change.Size = new System.Drawing.Size(57, 61);
-            this.change.TabIndex = 4;
-            this.change.Text = "改变";
-            this.change.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

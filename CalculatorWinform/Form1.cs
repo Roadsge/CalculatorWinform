@@ -103,7 +103,7 @@ namespace CalculatorWinform
         {
             Clear();
         }
-
+        //计算1/x
         private void fraction_Click(object sender, EventArgs e)
         {
             flag = true;
@@ -111,39 +111,54 @@ namespace CalculatorWinform
             textBox1.Text = $"1/({textBox2.Text})";
             textBox2.Text = (1d / dividend_number).ToString();
         }
-
+        //计算二次方
         private void square_Click(object sender, EventArgs e)
         {
             flag = true;
             textBox1.Text = $"sqr({textBox2.Text})";
             textBox2.Text = Math.Pow(double.Parse(textBox2.Text), 2).ToString();
         }
-
+        //计算平方根
         private void SquareRoot_Click(object sender, EventArgs e)
         {
             flag = true;
             textBox1.Text = "\u221A" + textBox2.Text;
             textBox2.Text = Math.Sqrt(double.Parse(textBox2.Text)).ToString();
         }
+        /// <summary>
+        /// 运算符号拼接
+        /// </summary>
+        /// <param name="sender"></param>
+        public void OperationJoint(object sender)
+        {
+            if (textBox2.Text.Trim().Length < 1)
+            {
+                return;
+            }
+            Button button = (Button)sender;
+            textBox1.Text = textBox2.Text + button.Text;
+            flag = true;
 
+        }
+        //乘法按钮
         private void division_Click(object sender, EventArgs e)
         {
-            flag = true;
+            OperationJoint(sender);
         }
-
+        //乘法按钮
         private void ride_Click(object sender, EventArgs e)
         {
-            flag = true;
+            OperationJoint(sender);
         }
-
+        //减法按钮
         private void minus_Click(object sender, EventArgs e)
         {
-            flag = true;
+            OperationJoint(sender);
         }
-
+        //加法按钮
         private void plus_Click(object sender, EventArgs e)
         {
-            flag = true;
+            OperationJoint(sender);
         }
 
         private void equals_Click(object sender, EventArgs e)
